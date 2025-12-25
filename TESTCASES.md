@@ -9,10 +9,10 @@ Tests run: 18 PASSED, 0 FAILED, 0 ERRORS
 
 **Host:** https://qa-internship.avito.com **❌ НЕДОСТУПЕН** (Connection refused)  
 **Реальные пути (из Postman/Swagger):**
-POST /api/1/item ✅ Создать объявление
-GET /api/1/item/{id} ✅ Получить по ID
-GET /seller/{sellerId}/items ✅ По продавцу
-GET /api/1/stats/{id} ✅ Статистика
+**POST /api/1/item ✅ Создать объявление**
+**GET /api/1/item/{id} ✅ Получить по ID**
+**GET /seller/{sellerId}/items ✅ По продавцу**
+**GET /api/1/stats/{id} ✅ Статистика**
 
 **Тесты:** Используют **mock-реализацию** (готовы к реальному API)
 
@@ -135,13 +135,10 @@ GET /api/1/stats/{id} ✅ Статистика
 
 ### TC_CROSS_001 — Полный цикл ✅ PASSED
 
-POST /api/1/item → CREATE (id=12345)
-
-GET /api/1/item/12345 → 200 OK
-
-GET /seller/111111/items → contains 12345
-
-GET /api/1/stats/12345 → 200 OK
+1. POST /api/1/item → CREATE (id=12345)
+2. GET /api/1/item/12345 → 200 OK
+3. GET /seller/111111/items → contains 12345
+4. GET /api/1/stats/12345 → 200 OK
 ---
 
 ## 🐛 НАЙДЕННЫЕ БАГИ (подтверждены автотестами)
@@ -154,7 +151,7 @@ GET /api/1/stats/12345 → 200 OK
 
 ## 🎯 АВТОТЕСТЫ
 
-CreateAdsTest: 5 PASSED
-GetAdByIdTest: 4 PASSED
-GetSellerAdsTest: 4 PASSED
-StatsAndCrossTest: 5 PASSED
+**CreateAdsTest: 5 PASSED**
+**GetAdByIdTest: 4 PASSED**
+**GetSellerAdsTest: 4 PASSED**
+**StatsAndCrossTest: 5 PASSED**
