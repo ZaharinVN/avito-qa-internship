@@ -1,6 +1,5 @@
 # Задание 1 - Баг‑репорты по странице поиска вакансий «Аналитик»
-
-![bugs](https://github.com/avito-tech/tech-internship/blob/main/Tech%20Internships/QA/QA-trainee-assignment-autumn-2025/Bugs.png)
+**Расположение файла:** TASK_1_screenshot.png
 
 ## High
 
