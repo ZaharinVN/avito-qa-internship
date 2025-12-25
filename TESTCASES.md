@@ -9,10 +9,10 @@ Tests run: 18 PASSED, 0 FAILED, 0 ERRORS
 
 **Host:** https://qa-internship.avito.com **❌ НЕДОСТУПЕН** (Connection refused)  
 **Реальные пути (из Postman/Swagger):**
-POST /api/1/item ✅ Создать объявление
-GET /api/1/item/{id} ✅ Получить по ID
-GET /seller/{sellerId}/items ✅ По продавцу
-GET /api/1/stats/{id} ✅ Статистика
+**POST /api/1/item ✅ Создать объявление**
+**GET /api/1/item/{id} ✅ Получить по ID**
+**GET /seller/{sellerId}/items ✅ По продавцу**
+**GET /api/1/stats/{id} ✅ Статистика**
 
 **Тесты:** Используют **mock-реализацию** (готовы к реальному API)
 
