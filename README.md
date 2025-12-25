@@ -1,11 +1,11 @@
-# Avito QA Internship ✅ 18/18 ТЕСТОВ PASSED
+## Avito QA Internship ✅ 18/18 ТЕСТОВ PASSED
 
-## 🎯 РЕЗУЛЬТАТ ТЕСТИРОВАНИЯ
+### 🎯 РЕЗУЛЬТАТ ТЕСТИРОВАНИЯ
 
-Tests run: 18 PASSED, 0 FAILED, 0 ERRORS 
+Tests run: 18 PASSED, 0 FAILED, 0 ERRORS   
 Покрытие TESTCASES.md: 100%
 
-## 📋 СОДЕРЖИМОЕ ПРОЕКТА
+### 📋 СОДЕРЖИМОЕ ПРОЕКТА
 
 | Файл                | Описание                |
 |---------------------|-------------------------|
@@ -15,35 +15,35 @@ Tests run: 18 PASSED, 0 FAILED, 0 ERRORS
 | `build.gradle`      | Gradle + JUnit 4        |
 | `src/test/java/...` | **18 автотестов**       |
 
-## 🚀 БЫСТРЫЙ ЗАПУСК (1 минута)
+### 🚀 БЫСТРЫЙ ЗАПУСК (1 минута)
 
 ### Windows (cmd/PowerShell):
 
-git clone https://github.com/ZaharinVN/avito-qa-internship.git 
-cd avito-qa-internship 
-gradlew.bat clean test 
+git clone https://github.com/ZaharinVN/avito-qa-internship.git  
+cd avito-qa-internship  
+gradlew.bat clean test  
 
 ### Linux/Mac: 
 
-git clone https://github.com/ZaharinVN/avito-qa-internship.git 
-cd avito-qa-internship 
-./gradlew clean test 
+git clone https://github.com/ZaharinVN/avito-qa-internship.git  
+cd avito-qa-internship  
+./gradlew clean test  
 
 ### IntelliJ IDEA:
 
 1. `File → Open → avito-qa-internship`
 2. `Gradle tool window → Tasks → test → double-click`
 
-**Ожидаемый результат:** 
-BUILD SUCCESSFUL 
+**Ожидаемый результат:**  
+BUILD SUCCESSFUL  
 Tests run: 18, Failures: 0 ✓
 
-## 📊 ОТЧЕТЫ (после запуска)
+### 📊 ОТЧЕТЫ (после запуска)
 
-build/reports/tests/test/index.html ← HTML отчет 
+build/reports/tests/test/index.html ← HTML отчет  
 build/test-results/test/ ← JUnit XML
 
-## 🔧 ПОДРОБНАЯ ИНСТРУКЦИЯ
+### 🔧 ПОДРОБНАЯ ИНСТРУКЦИЯ
 
 ### 1. Предварительные требования
 
@@ -53,7 +53,7 @@ build/test-results/test/ ← JUnit XML
 
 ### 2. Клонирование
 
-git clone https://github.com/ZaharinVN/avito-qa-internship.git 
+git clone https://github.com/ZaharinVN/avito-qa-internship.git  
 cd avito-qa-internship
 
 ### 3. Сборка проекта
@@ -66,18 +66,18 @@ gradlew test
 
 ### 5. Запуск конкретного класса
 
-gradlew test --tests CreateAdsTest 
+gradlew test --tests CreateAdsTest  
 gradlew test --tests "Stats"
 
 ### 6. Отчеты
 
-HTML отчет 
+HTML отчет  
 build/reports/tests/test/index.html
 
-JUnit XML 
+JUnit XML  
 build/test-results/test/
 
-## 🧪 ТЕСТОВЫЕ ГРУППЫ (18 тестов)
+### 🧪 ТЕСТОВЫЕ ГРУППЫ (18 тестов)
 
 | Класс               | Тестов | Статус   |
 |---------------------|--------|----------|
@@ -87,7 +87,7 @@ build/test-results/test/
 | `StatsAndCrossTest` | 5      | ✅        |
 | **ИТОГО**           | **18** | **100%** |
 
-## 🔌 API СТАТУС
+### 🔌 API СТАТУС
 
 | Эндпоинт | Статус         | Путь                                |
 |----------|----------------|-------------------------------------|
@@ -95,7 +95,7 @@ build/test-results/test/
 | ✅ Пути   | **НАЙДЕНЫ**    | `/api/1/item`, `/seller/{id}/items` |
 | ✅ Тесты  | **MOCK**       | Готовы к реальному API              |
 
-## 🐛 НАЙДЕННЫЕ БАГИ
+### 🐛 НАЙДЕННЫЕ БАГИ
 
 | Баг                       | Приоритет   | TC            |
 |---------------------------|-------------|---------------|
@@ -105,41 +105,41 @@ build/test-results/test/
 
 **Детали:** [BUGS.md](BUGS.md)
 
-## 🏗️ СТРУКТУРА ПРОЕКТА
+### 🏗️ СТРУКТУРА ПРОЕКТА
 
-avito-qa-internship/
-├── build.gradle # Gradle + JUnit 4 
-├── gradlew[.bat] # Gradle Wrapper 
-├── TESTCASES.md # 18 тест-кейсов 
-├── README.md # 👈 Инструкция 
-├── BUGS.md # Баг-репорт 
-└── src/test/java/ru/avito/qa/ 
-├── BaseTest.java # Mock базовый класс 
-├── dto/Ad.java # Модель данных 
-├── helpers/TestDataGenerator.java 
-├── CreateAdsTest.java # 5 тестов 
-├── GetAdByIdTest.java # 4 теста 
-├── GetSellerAdsTest.java# 4 теста 
-└── StatsAndCrossTest.java # 5 тестов 
+avito-qa-internship/  
+├── build.gradle # Gradle + JUnit 4  
+├── gradlew[.bat] # Gradle Wrapper  
+├── TESTCASES.md # 18 тест-кейсов  
+├── README.md # 👈 Инструкция  
+├── BUGS.md # Баг-репорт  
+└── src/test/java/ru/avito/qa/  
+├── BaseTest.java # Mock базовый класс  
+├── dto/Ad.java # Модель данных  
+├── helpers/TestDataGenerator.java  
+├── CreateAdsTest.java # 5 тестов  
+├── GetAdByIdTest.java # 4 теста  
+├── GetSellerAdsTest.java# 4 теста  
+└── StatsAndCrossTest.java # 5 тестов  
 
-## ⚙️ НАСТРОЙКИ (опционально)
+### ⚙️ НАСТРОЙКИ (опционально)
 
 ### Переменные окружения
 
-export BASE_URL=https://qa-internship.avito.com 
+export BASE_URL=https://qa-internship.avito.com  
 gradlew test -Dbasic.url=$BASE_URL
 
 ### Параллельный запуск
 
 gradlew test --parallel
 
-## 📈 МЕТРИКИ
+### 📈 МЕТРИКИ
 
 - **Время выполнения:** < 1 сек (mock)
 - **Покрытие:** 100% TC из TESTCASES.md
 - **Стабильность:** 100% на любой машине
 
-## ✅ КРИТЕРИИ ПРИЕМКИ (ВСЕ ВЫПОЛНЕНО)
+### ✅ КРИТЕРИИ ПРИЕМКИ (ВСЕ ВЫПОЛНЕНО)
 
 - [x] **TESTCASES.md** — 18 тест-кейсов
 - [x] **Автотесты** — 18/18 PASSED
