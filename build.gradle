@@ -1,16 +1,8 @@
 plugins {
-    id 'java'
-    id 'application'
-    id 'org.springframework.boot' version '3.2.0'
+    id 'java-library'
 }
 
-group = 'avito.qa'
-version = '1.0.0'
-
 java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
 }
@@ -20,50 +12,25 @@ repositories {
 }
 
 dependencies {
-    // Test framework
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.10.2'
+    // JUnit 4
+    testImplementation 'junit:junit:4.13.2'
 
-    // REST API testing
+    // RestAssured
     testImplementation 'io.rest-assured:rest-assured:5.4.0'
-    testImplementation 'io.rest-assured:json-path:5.4.0'
-    testImplementation 'io.rest-assured:json-schema-validator:5.4.0'
 
-    // JSON processing
-    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
-    testImplementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.16.1'
-
-    // Logging
-    testImplementation 'org.slf4j:slf4j-simple:2.0.9'
-
-    // Assertions
-    testImplementation 'org.assertj:assertj-core:3.25.3'
+    // JSON
+    testImplementation 'com.fasterxml.jackson.core:jackson-databind:2.17.2'
 }
 
 test {
-    useJUnitPlatform()
 
-    // Parallel execution
-    maxParallelForks = Runtime.runtime.availableProcessors().intdiv(2) ?: 1
+    systemProperty 'base.url', 'https://qa-internship.avito.com'
 
-    // Reports
-    reports {
-        junitXml.required = true
-        html.required = true
-    }
-
-    // Test logging
     testLogging {
-        events "PASSED", "SKIPPED", "FAILED", "STANDARD_OUT", "STANDARD_ERROR"
+        events 'passed', 'skipped', 'failed'
         showStandardStreams = true
     }
 }
-tasks.named('test') {
-    useJUnitPlatform()
-    systemProperty 'BASE_URL', System.getProperty('base.url') ?: 'https://qa-internship.avito.com'
-}
 
-// Clean task
-tasks.named('clean') {
-    delete 'build'
-}
+
+

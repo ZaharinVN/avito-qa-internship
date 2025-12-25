@@ -1,5 +1,7 @@
 package ru.avito.qa.helpers;
 
+import ru.avito.qa.dto.Ad;
+
 import java.util.concurrent.atomic.AtomicLong;
 
 public class TestDataGenerator {
@@ -8,24 +10,30 @@ public class TestDataGenerator {
     private static final long MAX_SELLER_ID = 999999;
 
     public Long generateUniqueSellerId() {
-        return sellerIdCounter.getAndIncrement();
+        long nextId = sellerIdCounter.getAndIncrement();
+        if (nextId > MAX_SELLER_ID) {
+            sellerIdCounter.set(MIN_SELLER_ID);
+            return MIN_SELLER_ID;
+        }
+        return nextId;
     }
 
-    public ru.avito.qa.dto.Ad createValidAd(Long sellerId) {
-        return ru.avito.qa.dto.Ad.builder()
-                .sellerId(sellerId)
-                .title("Test Ad - " + System.currentTimeMillis())
-                .description("Test description for automation")
-                .price(1000 + (int)(Math.random() * 9000))
-                .build();
+    public Ad createValidAd(Long sellerId) {
+        Ad ad = new Ad();
+        ad.setSellerId(sellerId);
+        ad.setTitle("Test Ad - " + System.currentTimeMillis());
+        ad.setDescription("Test description for automation");
+        ad.setPrice(1000 + (int) (Math.random() * 9000));
+        return ad;
     }
 
-    public ru.avito.qa.dto.Ad createAdWithInvalidPrice(Long sellerId) {
-        return ru.avito.qa.dto.Ad.builder()
-                .sellerId(sellerId)
-                .title("Invalid Price Ad")
-                .description("Price is negative")
-                .price(-100)
-                .build();
+    public Ad createAdWithInvalidPrice(Long sellerId) {
+        Ad ad = new Ad();
+        ad.setSellerId(sellerId);
+        ad.setTitle("Invalid Price Ad");
+        ad.setDescription("Price is negative");
+        ad.setPrice(-100);
+        return ad;
     }
 }
+
