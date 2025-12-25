@@ -111,19 +111,19 @@ build/test-results/test/
 avito-qa-internship/  
 ├── build.gradle # Gradle + JUnit 4  
 ├── gradlew[.bat] # Gradle Wrapper  
-├── TESTCASES.md # 18 тест-кейсов  
 ├── README.md # 👈 Инструкция  
-├── BUGS.md # Баг-репорт  
+├── TASK_2_BUGS.md # Баг-репорт    
+├── TASK_2_TESTCASES.md # 18 тест-кейсов   
 └── src/test/java/ru/avito/qa/  
-├── BaseTest.java # Mock базовый класс  
-├── dto/Ad.java # Модель данных  
-├── helpers/TestDataGenerator.java  
-├── CreateAdsTest.java # 5 тестов  
-├── GetAdByIdTest.java # 4 теста  
-├── GetSellerAdsTest.java# 4 теста  
-└── StatsAndCrossTest.java # 5 тестов  
+  ├── BaseTest.java # Mock базовый класс  
+  ├── dto/Ad.java # Модель данных  
+  ├── helpers/TestDataGenerator.java    
+  ├── CreateAdsTest.java # 5 тестов  
+  ├── GetAdByIdTest.java # 4 теста  
+  ├── GetSellerAdsTest.java# 4 теста  
+  └── StatsAndCrossTest.java # 5 тестов  
 
-### ⚙️ НАСТРОЙКИ (опционально)
+### ⚙️ НАСТРОЙКИ 
 
 ### Переменные окружения
 
