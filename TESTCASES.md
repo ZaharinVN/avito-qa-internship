@@ -8,18 +8,18 @@ Tests run: 18 PASSED, 0 FAILED, 0 ERRORS
 ## 🔌 API ИНФОРМАЦИЯ
 
 **Host:** https://qa-internship.avito.com **❌ НЕДОСТУПЕН** (Connection refused)  
-**Реальные пути (из Postman/Swagger):**
-**POST /api/1/item ✅ Создать объявление**
-**GET /api/1/item/{id} ✅ Получить по ID**
-**GET /seller/{sellerId}/items ✅ По продавцу**
-**GET /api/1/stats/{id} ✅ Статистика**
+**Реальные пути (из Postman/Swagger):** 
+**POST /api/1/item ✅ Создать объявление** 
+**GET /api/1/item/{id} ✅ Получить по ID** 
+**GET /seller/{sellerId}/items ✅ По продавцу** 
+**GET /api/1/stats/{id} ✅ Статистика** 
 
 **Тесты:** Используют **mock-реализацию** (готовы к реальному API)
 
 ## 1. Общие обозначения
 
-- `<BASE_URL>` = `https://qa-internship.avito.com`
-- `sellerId`: диапазон **111111–999999** (рекомендация, **валидация отсутствует**)
+- `<BASE_URL>` = `https://qa-internship.avito.com` 
+- `sellerId`: диапазон **111111–999999** (рекомендация, **валидация отсутствует**) 
 - **Все TC автоматизированы** → `gradlew test`
 
 ---
@@ -30,12 +30,12 @@ Tests run: 18 PASSED, 0 FAILED, 0 ERRORS
 
 **Предусловия:** Уникальный `sellerId=111111+`  
 **Шаги:** `POST /api/1/item`  
-{
-"sellerId": 111111,
-"title": "Test ad",
-"description": "Test desc",
-"price": 1000
-}
+{ 
+"sellerId": 111111, 
+"title": "Test ad", 
+"description": "Test desc", 
+"price": 1000 
+} 
 **Ожидание:** `201 Created`, возвращает `id`  
 **Факт:** ✅ Mock возвращает `id=12345`
 
@@ -135,10 +135,10 @@ Tests run: 18 PASSED, 0 FAILED, 0 ERRORS
 
 ### TC_CROSS_001 — Полный цикл ✅ PASSED
 
-1. POST /api/1/item → CREATE (id=12345)
-2. GET /api/1/item/12345 → 200 OK
-3. GET /seller/111111/items → contains 12345
-4. GET /api/1/stats/12345 → 200 OK
+1. POST /api/1/item → CREATE (id=12345) 
+2. GET /api/1/item/12345 → 200 OK 
+3. GET /seller/111111/items → contains 12345 
+4. GET /api/1/stats/12345 → 200 OK 
 ---
 
 ## 🐛 НАЙДЕННЫЕ БАГИ (подтверждены автотестами)
@@ -151,7 +151,7 @@ Tests run: 18 PASSED, 0 FAILED, 0 ERRORS
 
 ## 🎯 АВТОТЕСТЫ
 
-**CreateAdsTest: 5 PASSED**
-**GetAdByIdTest: 4 PASSED**
-**GetSellerAdsTest: 4 PASSED**
-**StatsAndCrossTest: 5 PASSED**
+ **CreateAdsTest: 5 PASSED**
+ **GetAdByIdTest: 4 PASSED**
+ **GetSellerAdsTest: 4 PASSED**
+ **StatsAndCrossTest: 5 PASSED**
